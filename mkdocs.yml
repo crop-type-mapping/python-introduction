@@ -1,0 +1,42 @@
+site_name: Introduction to Python Programming
+
+theme:
+  name: material
+  palette:
+    primary: teal
+    accent: teal
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - toc.integrate
+    - content.code.copy
+    - search.highlight
+    - search.suggest
+
+nav:
+  - Home: index.md
+
+  - Python Basics:
+      - Introduction to Python Syntax: Syntax.md
+      - Variables, Data Types, and Operations: Variables.md
+      - Lists, Dictionaries, and Tuples: Lists_Dictionaries_Tuples.md
+      - Loops and Conditionals: Loops_and_Conditionals.md
+      - Functions and File I/O: Functions_and_File_IO.md
+
+  - Creating and Managing Python Environments:
+      - Python Environment Management: Python_Environment_Management.md
+
+  - Working with Geospatial Data:
+      - Vector vs Raster Data: Vector_vs_Raster_Data.md
+      - Coordinate Reference Systems (CRS): Coordinate_Reference_Systems.md
+      - Reading and Plotting Shapefiles: Reading_and_Plotting_Shapefiles.md
+      - Opening and Exploring Raster Files: Opening_and_Exploring_Raster_Files.md
+      - Masking and Clipping Rasters: Masking_and_Clipping_Rasters.md
+      - Patch Extraction from Rasters: Patch_Extraction_from_Rasters.md
+      - Google Earth Engine Python API: GEE_Python_API.md
+      
+      
+
+  - Geospatial AI:
+      - Crop Classification (ML + DL): Crop_Classification_ML_DL.md
+      
