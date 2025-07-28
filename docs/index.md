@@ -63,6 +63,7 @@ You can write and run Python code using:
 ### 3. Creating Python Environments
 
 - **With Miniforge (recommended)**:
+
   ```bash
   conda create -n geopy python=3.10
   conda activate geopy
@@ -70,6 +71,7 @@ You can write and run Python code using:
   ```
 
 - **With venv (built-in)**:
+
   ```bash
   python -m venv geopy
   source geopy/bin/activate  # or .\geopy\Scripts\activate on Windows
