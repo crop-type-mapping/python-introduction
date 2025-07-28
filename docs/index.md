@@ -5,7 +5,7 @@ This training introduces Python programming and its application in geospatial da
 
 ---
 
-## Course Objectives
+## Training Objectives
 
 By the end of this training, you will be able to:
 - Understand Python basics and data structures
