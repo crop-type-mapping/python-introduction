@@ -106,3 +106,7 @@ pip install -r requirements.txt
 1. Create a `venv` or `conda` environment for your crop mapping project.
 2. Install `rasterio`, `numpy`, `geopandas`, and test import.
 3. Export the environment and share with a colleague.
+
+---
+
+⬅️ [Home](index.md) | [Next: Introduction to Python Syntax ➡️](Syntax.md)

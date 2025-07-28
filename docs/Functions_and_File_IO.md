@@ -84,3 +84,8 @@ Always use `with open(...)` — it automatically closes the file safely.
 3. Read a file with crop names and print each with `"Crop:"` prefix.
 4. Write a function that takes a list of yields and writes them to a file.
 5. Extend the above function to also return the average yield.
+
+
+---
+
+⬅️ [Previous: Loops and Conditionals](Loops_and_Conditionals.md) | [Next: Vector vs Raster Data ➡️](Vector_vs_Raster_Data.md)

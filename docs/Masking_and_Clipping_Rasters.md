@@ -80,3 +80,7 @@ show(clipped_image[0], title="Clipped Raster")
 
 - If your AOI has multiple polygons, consider simplifying it or clipping one feature at a time.
 - You can use `.buffer(0)` on geometries to fix invalid shapes.
+
+---
+
+⬅️ [Previous: Opening and Exploring Raster Files](Opening_and_Exploring_Raster_Files.md) | [Next: Patch Extraction from Rasters ➡️](Patch_Extraction_from_Rasters.md)

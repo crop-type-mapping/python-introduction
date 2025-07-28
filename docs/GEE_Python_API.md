@@ -99,3 +99,8 @@ pip install geemap
 
 - [GEE Python API Docs](https://developers.google.com/earth-engine/guides/python_install)
 - [Geemap Docs](https://geemap.org/)
+
+
+---
+
+⬅️ [Previous: Patch Extraction from Rasters](Patch_Extraction_from_Rasters.md) | [Next: Geospatial AI Summary ➡️](Crop_Classification_ML_DL.md)

@@ -36,3 +36,7 @@ import datetime
 print("Welcome to Crop Type Mapping with Python!")
 print("Year:", datetime.datetime.now().year)
 ```
+
+---
+
+⬅️ [Python Environment Management](Python_Environment_Management.md) | [Next: Variables and Data Types ➡️](Variables.md)

@@ -91,3 +91,7 @@ b = src.read(1)
 rgb = np.stack([r, g, b], axis=-1)
 plt.imshow(rgb / 255)
 ```
+
+---
+
+⬅️ [Previous: Reading and Plotting Shapefiles](Reading_and_Plotting_Shapefiles.md) | [Next: Masking and Clipping Rasters ➡️](Masking_and_Clipping_Rasters.md)

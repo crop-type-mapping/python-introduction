@@ -88,3 +88,7 @@ Use `.to_crs()` to reproject your shapefile before plotting if it appears distor
 gdf_utm = gdf.to_crs(epsg=32636)
 gdf_utm.plot()
 ```
+
+---
+
+⬅️ [Previous: Coordinate Reference Systems (CRS)](Coordinate_Reference_Systems.md) | [Next: Opening and Exploring Raster Files ➡️](Opening_and_Exploring_Raster_Files.md)

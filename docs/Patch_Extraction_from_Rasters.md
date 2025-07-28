@@ -72,3 +72,7 @@ stride = 32  # overlap
 ```
 
 This increases the number of patches and improves spatial learning in ML.
+
+---
+
+⬅️ [Previous: Masking and Clipping Rasters ](Masking_and_Clipping_Rasters.md) | [Next: Google Earth Engine Python API ➡️](GEE_Python_API.md)

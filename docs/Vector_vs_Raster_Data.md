@@ -85,3 +85,7 @@ Raster data is ideal for:
 3. Plot a vector and raster layer together using `matplotlib`.
 4. Describe three real-world use cases where each format is better suited.
 5. Bonus: Convert NDVI raster to vector by thresholding and vectorizing high NDVI areas.
+
+---
+
+⬅️ [Previous: Functions and File I/O](Functions_and_File_IO.md) | [Next: Coordinate Reference Systems (CRS) ➡️](Coordinate_Reference_Systems.md)

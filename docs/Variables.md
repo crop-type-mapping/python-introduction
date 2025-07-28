@@ -82,3 +82,8 @@ Try these on your own or in a Jupyter Notebook:
 2. Compute and print the total expected yield.
 3. Convert a number given as a string (e.g., `'10'`) into an integer and multiply it by 2.
 4. Write a condition that prints "High Yield" if yield > 3, "Moderate" if between 2 and 3, else "Low".
+
+---
+
+⬅️ [Previous: Introduction to Python Syntax](Syntax.md) | [Next: Lists, Dictionaries, and Tuples ➡️](Lists_Dictionaries_Tuples.md)
+

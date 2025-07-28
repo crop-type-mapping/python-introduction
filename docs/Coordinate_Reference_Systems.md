@@ -92,3 +92,8 @@ with rasterio.open("satellite.tif") as src:
 3. Load a raster and display its CRS.
 4. Reproject a raster using Rasterio and save the output.
 5. Bonus: Search the EPSG registry and find the correct code for your country’s UTM zone.
+
+---
+
+⬅️ [Previous: Understanding Vector vs Raster Data](Vector_vs_Raster_Data.md) | [Next: Reading and Plotting Shapefiles ➡️](Reading_and_Plotting_Shapefiles.md)
+

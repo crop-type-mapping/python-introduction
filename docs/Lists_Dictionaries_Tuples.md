@@ -87,3 +87,7 @@ print(crop_yields.keys())
 3. Create a dictionary with crop names as keys and yield per hectare as values.
 4. Add a new crop to the dictionary and print all items.
 5. Write a function that takes a crop name and returns the yield from the dictionary.
+
+---
+
+⬅️ [Previous: Variables and Data Types](Variables.md) | [Next: Loops and Conditionals ➡️](Loops_and_Conditionals.md)
