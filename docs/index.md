@@ -1,13 +1,13 @@
 # Introduction to Python Programming
 
 Welcome to the **Introduction to Python Programming**  
-This course introduces Python programming and its application in geospatial data processing and geospatial artificial intelligence (GeoAI).
+This training introduces Python programming and its application in geospatial data processing and geospatial artificial intelligence (GeoAI).
 
 ---
 
 ## Course Objectives
 
-By the end of this course, you will be able to:
+By the end of this training, you will be able to:
 - Understand Python basics and data structures
 - Work with shapefiles and raster data
 - Clip, mask, and extract raster patches
@@ -16,9 +16,9 @@ By the end of this course, you will be able to:
 
 ---
 
-## Course Structure
+## Training Structure
 
-The course is organized into four main sections:
+The training is organized into four main sections:
 
 1. **Python Environments**  
    Create and manage environments using tools like Miniforge and `venv`.
