@@ -5,14 +5,16 @@ This training introduces Python programming and its application in geospatial da
 
 ---
 
-## Training Objectives
+## Objectives
 
 By the end of this training, you will be able to:
-- Understand Python basics and data structures
-- Work with shapefiles and raster data
-- Clip, mask, and extract raster patches
-- Apply machine learning and deep learning to classify crop types
+
+- Understand Python basics and data structures  
+- Work with shapefiles and raster data  
+- Clip, mask, and extract raster patches  
+- Apply machine learning and deep learning 
 - Use Google Earth Engine (GEE) for large-scale geospatial analysis
+
 
 ---
 
@@ -44,7 +46,6 @@ To successfully follow along, you’ll need:
 
 - Recommended: [Miniforge](https://github.com/conda-forge/miniforge)
   - Lightweight Conda-based Python distribution
-  - Works well for geospatial libraries (e.g., `rasterio`, `geopandas`)
 - Alternative:
   - [Python.org](https://www.python.org/downloads/)
   - [Anaconda](https://www.anaconda.com/products/distribution)
@@ -60,25 +61,6 @@ You can write and run Python code using:
 
 > Google Colab is especially helpful when using GPUs or accessing cloud resources.
 
-### 3. Creating Python Environments
-
-- **With Miniforge (recommended)**:
-
-  ```bash
-  conda create -n geopy python=3.10
-  conda activate geopy
-  conda install geopandas rasterio scikit-learn matplotlib
-  ```
-
-- **With venv (built-in)**:
-
-  ```bash
-  python -m venv geopy
-  source geopy/bin/activate  # or .\geopy\Scripts\activate on Windows
-  pip install geopandas rasterio scikit-learn matplotlib
-  ```
-
----
 
 ## Let's Get Started
 
