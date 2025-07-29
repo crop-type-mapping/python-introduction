@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#using-venv-built-in-python-virtual-environment" class="md-skip">
+        <a href="#required-python-packages" class="md-skip">
           Skip to content
         </a>
       
@@ -430,37 +430,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#using-venv-built-in-python-virtual-environment" class="md-nav__link">
+  <a href="#required-python-packages" class="md-nav__link">
     <span class="md-ellipsis">
-      Using venv (Built-in Python Virtual Environment)
+      Required Python Packages
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-virtualenv" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using virtualenv
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-conda-anaconda-or-miniforge" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using conda (Anaconda or Miniforge)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Using conda (Anaconda or Miniforge)">
+    <nav class="md-nav" aria-label="Required Python Packages">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#miniforge" class="md-nav__link">
+  <a href="#core-packages" class="md-nav__link">
     <span class="md-ellipsis">
-      Miniforge
+      Core Packages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geospatial-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Geospatial Libraries
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extras" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extras
     </span>
   </a>
   
@@ -472,18 +472,102 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#export-and-reuse-environment" class="md-nav__link">
+  <a href="#environment-setup-methods" class="md-nav__link">
     <span class="md-ellipsis">
-      Export and Reuse Environment
+      Environment Setup Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Environment Setup Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-using-venv-built-in-python-virtual-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      A. Using venv (Built-in Python Virtual Environment)
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#b-using-conda-with-miniforge" class="md-nav__link">
+    <span class="md-ellipsis">
+      B. Using conda (With Miniforge)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-installing-miniforge" class="md-nav__link">
+    <span class="md-ellipsis">
+      C. Installing Miniforge
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#using-pip-tools-for-better-dependency-control" class="md-nav__link">
+  <a href="#using-environmentyml" class="md-nav__link">
     <span class="md-ellipsis">
-      Using pip-tools for better dependency control
+      Using environment.yml
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using environment.yml">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-the-environmentyml-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Create the environment.yml file
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-create-the-environment-from-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Create the environment from file
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-activate-the-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Activate the environment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-export-your-environment-for-sharing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Export your environment (for sharing)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optional-using-pip-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optional: Using pip-tools
     </span>
   </a>
   
@@ -986,77 +1070,177 @@
 
 <p>Managing Python environments is essential for avoiding package conflicts and keeping your projects isolated. Below are common tools and methods for environment management.</p>
 <hr />
-<h4 id="using-venv-built-in-python-virtual-environment">Using <code>venv</code> (Built-in Python Virtual Environment)</h4>
-<pre><code class="language-bash"># Create environment
-python -m venv myenv
-
-# Activate
-source myenv/bin/activate      # Linux/macOS
-myenv\Scripts\activate.bat   # Windows
-
-# Deactivate
-deactivate
-</code></pre>
-<p>Install packages inside the environment:</p>
-<pre><code class="language-bash">pip install numpy pandas
+<h2 id="required-python-packages">Required Python Packages</h2>
+<p>To run all examples in this Training, install the following:</p>
+<h3 id="core-packages">Core Packages</h3>
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>numpy</code></td>
+<td>Numerical operations</td>
+</tr>
+<tr>
+<td><code>pandas</code></td>
+<td>Data manipulation</td>
+</tr>
+<tr>
+<td><code>matplotlib</code></td>
+<td>Plotting and visualization</td>
+</tr>
+<tr>
+<td><code>scikit-learn</code></td>
+<td>Machine learning (Random Forest, etc.)</td>
+</tr>
+<tr>
+<td><code>tensorflow</code></td>
+<td>Deep learning (CNN, model training)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="geospatial-libraries">Geospatial Libraries</h3>
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rasterio</code></td>
+<td>Reading/writing raster data</td>
+</tr>
+<tr>
+<td><code>geopandas</code></td>
+<td>Handling shapefiles (vector data)</td>
+</tr>
+<tr>
+<td><code>fiona</code></td>
+<td>Shapefile I/O (used by geopandas)</td>
+</tr>
+<tr>
+<td><code>pyproj</code></td>
+<td>Coordinate reference system support</td>
+</tr>
+<tr>
+<td><code>shapely</code></td>
+<td>Geometry manipulation</td>
+</tr>
+<tr>
+<td><code>earthengine-api</code></td>
+<td>Google Earth Engine Python API</td>
+</tr>
+</tbody>
+</table>
+<h3 id="extras">Extras</h3>
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>jupyterlab</code></td>
+<td>Interactive notebooks (optional)</td>
+</tr>
+<tr>
+<td><code>ipykernel</code></td>
+<td>Jupyter support for virtual envs</td>
+</tr>
+<tr>
+<td><code>h5py</code></td>
+<td>Reading <code>.h5</code> format (deep learning)</td>
+</tr>
+<tr>
+<td><code>tqdm</code></td>
+<td>Progress bars</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="environment-setup-methods">Environment Setup Methods</h2>
+<h3 id="a-using-venv-built-in-python-virtual-environment">A. Using <code>venv</code> (Built-in Python Virtual Environment)</h3>
+<pre><code class="language-bash">python -m venv geopy
+source geopy/bin/activate        # Linux/macOS
+.\geopy\Scriptsctivate         # Windows
+pip install numpy pandas geopandas rasterio scikit-learn tensorflow matplotlib
 </code></pre>
 <hr />
-<h4 id="using-virtualenv">Using <code>virtualenv</code></h4>
-<p>A more flexible tool, especially for older Python versions.</p>
-<pre><code class="language-bash">pip install virtualenv
-virtualenv myenv
-source myenv/bin/activate
+<h3 id="b-using-conda-with-miniforge">B. Using <code>conda</code> (With Miniforge)</h3>
+<pre><code class="language-bash">conda create -n geopy python=3.10
+conda activate geopy
+conda install numpy pandas matplotlib scikit-learn tensorflow rasterio geopandas fiona shapely pyproj earthengine-api
+
 </code></pre>
 <hr />
-<h4 id="using-conda-anaconda-or-miniforge">Using <code>conda</code> (Anaconda or Miniforge)</h4>
-<pre><code class="language-bash"># Create a new environment
-conda create -n crop_env python=3.10
-
-# Activate
-conda activate crop_env
-
-# Install packages
-conda install numpy pandas rasterio
-
-# Deactivate
-conda deactivate
-</code></pre>
-<h5 id="miniforge">Miniforge</h5>
-<p>Lightweight alternative to Anaconda with conda-forge as default channel:</p>
-<pre><code class="language-bash"># Download and install Miniforge
+<h3 id="c-installing-miniforge">C. Installing Miniforge</h3>
+<p>Miniforge is a lightweight Conda alternative using conda-forge:</p>
+<pre><code class="language-bash"># Download and install
 wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
 bash Miniforge3-Linux-x86_64.sh
 </code></pre>
 <hr />
-<h4 id="export-and-reuse-environment">Export and Reuse Environment</h4>
-<p>Export environment:</p>
-<pre><code class="language-bash">conda env export &gt; environment.yml
+<h2 id="using-environmentyml">Using <code>environment.yml</code></h2>
+<h3 id="step-1-create-the-environmentyml-file">Step 1: Create the <code>environment.yml</code> file</h3>
+<pre><code class="language-yaml">name: geopy
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - numpy
+  - pandas
+  - matplotlib
+  - scikit-learn
+  - tensorflow
+  - rasterio
+  - geopandas
+  - fiona
+  - shapely
+  - pyproj
+  - earthengine-api
 </code></pre>
-<p>Recreate environment from file:</p>
+<h3 id="step-2-create-the-environment-from-file">Step 2: Create the environment from file</h3>
 <pre><code class="language-bash">conda env create -f environment.yml
 </code></pre>
+<h3 id="step-3-activate-the-environment">Step 3: Activate the environment</h3>
+<pre><code class="language-bash">conda activate geopy
+</code></pre>
+<h3 id="step-4-export-your-environment-for-sharing">Step 4: Export your environment (for sharing)</h3>
+<pre><code class="language-bash">conda env export &gt; environment.yml
+</code></pre>
 <hr />
-<h4 id="using-pip-tools-for-better-dependency-control">Using <code>pip-tools</code> for better dependency control</h4>
+<h2 id="optional-using-pip-tools">Optional: Using <code>pip-tools</code></h2>
 <pre><code class="language-bash">pip install pip-tools
 
-# Create requirements
-echo &quot;rasterio&quot; &gt; requirements.in
+# Create a minimal requirements file
+echo &quot;rasterio
+tensorflow
+scikit-learn&quot; &gt; requirements.in
 pip-compile requirements.in
 pip install -r requirements.txt
 </code></pre>
 <hr />
-<h4 id="tips">Tips</h4>
+<h2 id="tips">Tips</h2>
 <ul>
-<li>Use separate environments per project.</li>
-<li>Prefer <code>conda</code> for geospatial libraries (e.g., rasterio, geopandas).</li>
-<li>Save <code>requirements.txt</code> or <code>environment.yml</code> in your repo for reproducibility.</li>
+<li>Use a fresh environment for each new project.</li>
+<li>Prefer <code>conda</code> for geospatial libraries (easier installation).</li>
+<li>Save <code>environment.yml</code> in your repo for reproducibility.</li>
 </ul>
 <hr />
-<h4 id="exercises">Exercises</h4>
+<h2 id="exercises">Exercises</h2>
 <ol>
-<li>Create a <code>venv</code> or <code>conda</code> environment for your crop mapping project.</li>
-<li>Install <code>rasterio</code>, <code>numpy</code>, <code>geopandas</code>, and test import.</li>
-<li>Export the environment and share with a colleague.</li>
+<li>Create a new conda environment for crop type classification.</li>
+<li>Install required packages and verify import.</li>
+<li>Export and share your environment using <code>environment.yml</code>.</li>
+<li>Try launching a Jupyter Notebook to test.</li>
 </ol>
 <hr />
 <p>⬅️ <a href="../">Home</a> | <a href="../Syntax/">Next: Introduction to Python Syntax ➡️</a></p>

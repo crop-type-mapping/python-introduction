@@ -364,9 +364,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#training-objectives" class="md-nav__link">
+  <a href="#objectives" class="md-nav__link">
     <span class="md-ellipsis">
-      Training Objectives
+      Objectives
     </span>
   </a>
   
@@ -404,15 +404,6 @@
   <a href="#2-code-editors" class="md-nav__link">
     <span class="md-ellipsis">
       2. Code Editors
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-creating-python-environments" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Creating Python Environments
     </span>
   </a>
   
@@ -974,13 +965,15 @@
 <p>Welcome to the <strong>Introduction to Python Programming</strong><br />
 This training introduces Python programming and its application in geospatial data processing and geospatial artificial intelligence (GeoAI).</p>
 <hr />
-<h2 id="training-objectives">Training Objectives</h2>
-<p>By the end of this training, you will be able to:
-- Understand Python basics and data structures
-- Work with shapefiles and raster data
-- Clip, mask, and extract raster patches
-- Apply machine learning and deep learning to classify crop types
-- Use Google Earth Engine (GEE) for large-scale geospatial analysis</p>
+<h2 id="objectives">Objectives</h2>
+<p>By the end of this training, you will be able to:</p>
+<ul>
+<li>Understand Python basics and data structures  </li>
+<li>Work with shapefiles and raster data  </li>
+<li>Clip, mask, and extract raster patches  </li>
+<li>Apply machine learning and deep learning </li>
+<li>Use Google Earth Engine (GEE) for large-scale geospatial analysis</li>
+</ul>
 <hr />
 <h2 id="training-structure">Training Structure</h2>
 <p>The training is organized into four main sections:</p>
@@ -1009,7 +1002,6 @@ This training introduces Python programming and its application in geospatial da
 <ul>
 <li>Recommended: <a href="https://github.com/conda-forge/miniforge">Miniforge</a></li>
 <li>Lightweight Conda-based Python distribution</li>
-<li>Works well for geospatial libraries (e.g., <code>rasterio</code>, <code>geopandas</code>)</li>
 <li>Alternative:</li>
 <li><a href="https://www.python.org/downloads/">Python.org</a></li>
 <li><a href="https://www.anaconda.com/products/distribution">Anaconda</a></li>
@@ -1025,22 +1017,6 @@ This training introduces Python programming and its application in geospatial da
 <blockquote>
 <p>Google Colab is especially helpful when using GPUs or accessing cloud resources.</p>
 </blockquote>
-<h3 id="3-creating-python-environments">3. Creating Python Environments</h3>
-<ul>
-<li><strong>With Miniforge (recommended)</strong>:</li>
-</ul>
-<p><code>bash
-  conda create -n geopy python=3.10
-  conda activate geopy
-  conda install geopandas rasterio scikit-learn matplotlib</code></p>
-<ul>
-<li><strong>With venv (built-in)</strong>:</li>
-</ul>
-<p><code>bash
-  python -m venv geopy
-  source geopy/bin/activate  # or .\geopy\Scripts\activate on Windows
-  pip install geopandas rasterio scikit-learn matplotlib</code></p>
-<hr />
 <h2 id="lets-get-started">Let's Get Started</h2>
 <p>Head to the next section: <a href="Python_Environment_Management/">Python Environment Management</a></p>
 
