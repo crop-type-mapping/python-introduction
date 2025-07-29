@@ -142,13 +142,5 @@ pip install -r requirements.txt
 
 ---
 
-## Exercises
-
-1. Create a new conda environment for crop type classification.
-2. Install required packages and verify import.
-3. Export and share your environment using `environment.yml`.
-4. Try launching a Jupyter Notebook to test.
-
----
 
 ⬅️ [Home](index.md) | [Next: Introduction to Python Syntax ➡️](Syntax.md)
