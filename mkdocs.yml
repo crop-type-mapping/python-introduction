@@ -23,6 +23,7 @@ nav:
       - Introduction to Python Syntax: Syntax.md
       - Variables, Data Types, and Operations: Variables.md
       - Lists, Dictionaries, and Tuples: Lists_Dictionaries_Tuples.md
+      - NumPy and Pandas: numpy_pandas_cheatsheet.md
       - Loops and Conditionals: Loops_and_Conditionals.md
       - Functions and File I/O: Functions_and_File_IO.md
 

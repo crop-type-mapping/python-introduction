@@ -17,7 +17,7 @@ from rasterio.plot import show
 
 ```python
 # Read AOI shapefile
-aoi = gpd.read_file("Nyagatare_A2021.shp")
+aoi = gpd.read_file("rwanda_districts.shp")
 print(aoi.crs)
 ```
 

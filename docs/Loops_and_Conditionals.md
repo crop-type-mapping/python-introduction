@@ -89,4 +89,4 @@ for crop in crops:
 
 ---
 
-⬅️ [Previous: Lists, Dictionaries, and Tuples](Lists_Dictionaries_Tuples.md) | [Next: Functions and File I/O ➡️](Functions_and_File_IO.md)
+⬅️ [Previous: Numpy, Pandas](numpy_pandas_cheatsheet.md) | [Next: Functions and File I/O ➡️](Functions_and_File_IO.md)

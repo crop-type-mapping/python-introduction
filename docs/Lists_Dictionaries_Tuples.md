@@ -100,4 +100,4 @@ print(crop_yields.items())
 
 ---
 
-⬅️ [Previous: Variables and Data Types](Variables.md) | [Next: Loops and Conditionals ➡️](Loops_and_Conditionals.md)
+⬅️ [Previous: Variables and Data Types](Variables.md) | [Next: Numpy, Pandas ➡️](numpy_pandas_cheatsheet.md)
