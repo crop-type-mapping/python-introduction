@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../Vector_vs_Raster_Data/">
+        <link rel="prev" href="../Lists_Dictionaries_Tuples/">
       
       
-        <link rel="next" href="../Reading_and_Plotting_Shapefiles/">
+        <link rel="next" href="../Loops_and_Conditionals/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Coordinate Reference Systems (CRS) - Introduction to Python Programming</title>
+        <title>NumPy and Pandas - Introduction to Python Programming</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#types-of-crs" class="md-skip">
+        <a href="#numpy-numerical-python" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Coordinate Reference Systems (CRS)
+              NumPy and Pandas
             
           </span>
         </div>
@@ -216,10 +216,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../Syntax/" class="md-tabs__link">
           
   
@@ -236,12 +238,10 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../Vector_vs_Raster_Data/" class="md-tabs__link">
           
   
@@ -406,24 +406,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -436,7 +441,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Python Basics
@@ -516,10 +521,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../numpy_pandas_cheatsheet/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    NumPy and Pandas
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -530,6 +555,324 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#numpy-numerical-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      NumPy (Numerical Python)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NumPy (Numerical Python)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#importing-numpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Importing NumPy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Arrays
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Array Operations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#indexing-and-slicing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Indexing and Slicing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#random-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Random Numbers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Random Numbers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nprandomrand-uniform-distribution-in-0-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      np.random.rand() – Uniform distribution in [0, 1)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nprandomrandint-random-integers-in-a-specified-range" class="md-nav__link">
+    <span class="md-ellipsis">
+      np.random.randint() – Random integers in a specified range
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nprandomseed-reproducibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      np.random.seed() – Reproducibility
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Useful Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pandas-python-data-analysis-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pandas (Python Data Analysis Library)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#importing-pandas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Importing Pandas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-data-structures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Data Structures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating Data Structures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#series-1d-labeled" class="md-nav__link">
+    <span class="md-ellipsis">
+      Series (1D, labeled)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dataframe-2d-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      DataFrame (2D table)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inputoutput" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input/Output
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Input/Output">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#read" class="md-nav__link">
+    <span class="md-ellipsis">
+      Read
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write" class="md-nav__link">
+    <span class="md-ellipsis">
+      Write
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inspecting-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inspecting Data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selecting-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selecting Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Selecting Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#column-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Column selection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#row-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Row selection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boolean-filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boolean filtering
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cleaning-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cleaning Data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aggregation-grouping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aggregation &amp; Grouping
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#merging-joining" class="md-nav__link">
+    <span class="md-ellipsis">
+      Merging &amp; Joining
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sorting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sorting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time-series" class="md-nav__link">
+    <span class="md-ellipsis">
+      Time Series
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#math-stats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Math &amp; Stats
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apply-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apply &amp; Map
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -592,29 +935,24 @@
       
   
   
-    
   
   
-  
     
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   
@@ -627,7 +965,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Working with Geospatial Data
@@ -661,30 +999,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Coordinate Reference Systems (CRS)
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Coordinate_Reference_Systems/" class="md-nav__link">
         
   
   
@@ -695,69 +1013,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#types-of-crs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Types of CRS
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#checking-and-setting-crs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Checking and Setting CRS
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#why-crs-matters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Why CRS Matters
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#common-epsg-codes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Common EPSG Codes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exercises" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exercises
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -972,129 +1227,244 @@
 
 
 
-  <h1>Coordinate Reference Systems (CRS)</h1>
+  <h1>NumPy and Pandas</h1>
 
-<p>A <strong>Coordinate Reference System (CRS)</strong> defines how the two-dimensional, projected map in your GIS relates to real places on the earth.</p>
-<p>CRS is crucial for <strong>aligning</strong> and <strong>analyzing</strong> geospatial data accurately.</p>
-<hr />
-<h4 id="types-of-crs">Types of CRS</h4>
-<p>There are two main types of CRS:</p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Geographic CRS</td>
-<td>Uses latitude and longitude (angular units)</td>
-<td>EPSG:4326 (WGS 84)</td>
-</tr>
-<tr>
-<td>Projected CRS</td>
-<td>Uses meters or feet on a flat surface</td>
-<td>EPSG:32636 (UTM)</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h4 id="checking-and-setting-crs">Checking and Setting CRS</h4>
-<pre><code class="language-python">import geopandas as gpd
-
-# Load shapefile
-gdf = gpd.read_file(&quot;farms.shp&quot;)
-
-# Check CRS
-print(gdf.crs)
-
-# Reproject to UTM Zone 36N
-gdf_utm = gdf.to_crs(&quot;EPSG:32636&quot;)
-print(gdf_utm.crs)
+<h2 id="numpy-numerical-python">NumPy (Numerical Python)</h2>
+<p>NumPy is the fundamental package for numerical computing in Python. It provides support for large, multi-dimensional arrays and matrices, along with a collection of mathematical functions to operate on these arrays.</p>
+<h3 id="importing-numpy">Importing NumPy</h3>
+<pre><code class="language-python">import numpy as np
 </code></pre>
-<p>You can reproject raster files too:</p>
-<pre><code class="language-python">import rasterio
-from rasterio.warp import calculate_default_transform, reproject, Resampling
+<h3 id="creating-arrays">Creating Arrays</h3>
+<pre><code class="language-python"># 1D array
+arr1 = np.array([1, 2, 3])
+print(&quot;np.array([1, 2, 3]) →&quot;, arr1)
 
-with rasterio.open(&quot;satellite.tif&quot;) as src:
-    dst_crs = &quot;EPSG:4326&quot;
-    transform, width, height = calculate_default_transform(
-        src.crs, dst_crs, src.width, src.height, *src.bounds
-    )
+# 2D array of zeros
+arr2 = np.zeros((2, 3))
+print(&quot;np.zeros((2, 3)) →\n&quot;, arr2)
 
-    kwargs = src.meta.copy()
-    kwargs.update({
-        'crs': dst_crs,
-        'transform': transform,
-        'width': width,
-        'height': height
-    })
+# 1D array of ones
+arr3 = np.ones(5)
+print(&quot;np.ones(5) →&quot;, arr3)
 
-    with rasterio.open(&quot;reprojected.tif&quot;, 'w', **kwargs) as dst:
-        for i in range(1, src.count + 1):
-            reproject(
-                source=rasterio.band(src, i),
-                destination=rasterio.band(dst, i),
-                src_transform=src.transform,
-                src_crs=src.crs,
-                dst_transform=transform,
-                dst_crs=dst_crs,
-                resampling=Resampling.nearest
-            )
+# Identity matrix
+arr4 = np.eye(3)
+print(&quot;np.eye(3) →\n&quot;, arr4)
+
+# Range of values with step
+arr5 = np.arange(0, 10, 2)
+print(&quot;np.arange(0, 10, 2) →&quot;, arr5)
+
+# Evenly spaced values over interval
+arr6 = np.linspace(0, 1, 5)
+print(&quot;np.linspace(0, 1, 5) →&quot;, arr6)
+
 </code></pre>
 <hr />
-<h4 id="why-crs-matters">Why CRS Matters</h4>
-<ul>
-<li>Ensures datasets align correctly on the map</li>
-<li>Allows spatial measurements (distance, area)</li>
-<li>Required for overlays, joins, or clipping operations</li>
-</ul>
+<h2 id="array-operations">Array Operations</h2>
+<pre><code class="language-python">a = np.array([1, 2, 3])
+b = np.array([4, 5, 6])
+
+print(&quot;a + b →&quot;, a + b)
+print(&quot;a - b →&quot;, a - b)
+print(&quot;a * b →&quot;, a * b)
+print(&quot;a / b →&quot;, a / b)
+
+print(&quot;np.dot(a, b) →&quot;, np.dot(a, b))  # 1×4 + 2×5 + 3×6 = 32
+
+print(&quot;np.sum(a) →&quot;, np.sum(a))
+print(&quot;np.mean(a) →&quot;, np.mean(a))
+print(&quot;np.std(a) →&quot;, np.std(a))
+print(&quot;np.max(a) →&quot;, np.max(a))
+print(&quot;np.min(a) →&quot;, np.min(a))
+print(&quot;np.argmin(a) →&quot;, np.argmin(a))  # index of min
+</code></pre>
 <hr />
-<h4 id="common-epsg-codes">Common EPSG Codes</h4>
-<table>
-<thead>
-<tr>
-<th>EPSG Code</th>
-<th>Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>4326</td>
-<td>WGS84</td>
-<td>Global Lat/Lon (GPS)</td>
-</tr>
-<tr>
-<td>3857</td>
-<td>Web Mercator</td>
-<td>Used in web maps (Google, OSM)</td>
-</tr>
-<tr>
-<td>32636</td>
-<td>UTM Zone 36N (WGS84)</td>
-<td>East Africa (meters)</td>
-</tr>
-<tr>
-<td>21097</td>
-<td>Arc 1960 / UTM zone 37S</td>
-<td>Kenya</td>
-</tr>
-</tbody>
-</table>
+<h2 id="indexing-and-slicing">Indexing and Slicing</h2>
+<pre><code class="language-python"># Create a 3x3 2D array
+a2d = np.array([[10, 20, 30],
+                [40, 50, 60],
+                [70, 80, 90]])
+
+# Access the first row
+print(&quot;a2d[0] →&quot;, a2d[0])  # [10, 20, 30]
+
+# Slice rows from index 1 to 2 (1:3 means rows 1 and 2)
+print(&quot;a2d[1:3] →\n&quot;, a2d[1:3])  # [[40, 50, 60], [70, 80, 90]]
+
+# Access the last row using negative index
+print(&quot;a2d[-1] →&quot;, a2d[-1])  # [70, 80, 90]
+
+# Access the second column from all rows
+print(&quot;a2d[:, 1] →&quot;, a2d[:, 1])  # [20, 50, 80]
+
+# Access all columns of the second row
+print(&quot;a2d[1, :] →&quot;, a2d[1, :])  # [40, 50, 60]
+
+# Slice a 2x2 subarray from rows 1-2 and columns 1-2
+print(&quot;a2d[1:3, 1:3] →\n&quot;, a2d[1:3, 1:3])  # [[50, 60], [80, 90]]
+</code></pre>
 <hr />
-<h4 id="exercises">Exercises</h4>
-<ol>
-<li>Load a vector file and print its CRS.</li>
-<li>Reproject a shapefile from WGS84 to UTM.</li>
-<li>Load a raster and display its CRS.</li>
-<li>Reproject a raster using Rasterio and save the output.</li>
-<li>Bonus: Search the EPSG registry and find the correct code for your country’s UTM zone.</li>
-</ol>
+<h2 id="random-numbers">Random Numbers</h2>
+<p>NumPy provides utilities to generate random numbers, which are very useful in simulations, testing, and initializing machine learning models.</p>
+<h3 id="nprandomrand-uniform-distribution-in-0-1"><code>np.random.rand()</code> – Uniform distribution in [0, 1)</h3>
+<p>Generates random float numbers between 0 and 1.</p>
+<pre><code class="language-python">rand_array = np.random.rand(3, 2)
+print(&quot;np.random.rand(3, 2) →\n&quot;, rand_array)
+</code></pre>
+<p><em>Output:</em> 3x2 matrix with random float values.</p>
 <hr />
-<p>⬅️ <a href="../Vector_vs_Raster_Data/">Previous: Understanding Vector vs Raster Data</a> | <a href="../Reading_and_Plotting_Shapefiles/">Next: Reading and Plotting Shapefiles ➡️</a></p>
+<h3 id="nprandomrandint-random-integers-in-a-specified-range"><code>np.random.randint()</code> – Random integers in a specified range</h3>
+<p>Generates random integers from the given range.</p>
+<pre><code class="language-python">rand_int = np.random.randint(0, 10, size=(3, 3))
+print(&quot;np.random.randint(0, 10, (3, 3)) →\n&quot;, rand_int)
+</code></pre>
+<p><em>Output:</em> 3x3 matrix with random integers from 0 to 9.</p>
+<hr />
+<h3 id="nprandomseed-reproducibility"><code>np.random.seed()</code> – Reproducibility</h3>
+<p>Sets a seed so that random numbers are the same across runs.</p>
+<pre><code class="language-python">np.random.seed(42)
+print(&quot;Seed set to 42 (for reproducibility)&quot;)
+</code></pre>
+<hr />
+<h2 id="useful-functions">Useful Functions</h2>
+<pre><code class="language-python">import numpy as np
+# Create an array with duplicates, NaN, and Inf values
+arr = np.array([4, 2, 2, np.nan, np.inf, 4])
+print(&quot;Original array →&quot;, arr)
+
+# Get unique elements from the array
+print(&quot;np.unique(arr) →&quot;, np.unique(arr))
+
+# Sort the array (NaN values usually appear last)
+print(&quot;np.sort(arr) →&quot;, np.sort(arr))
+
+# Concatenate two arrays
+concat = np.concatenate(([1, 2], [3, 4]))
+print(&quot;np.concatenate →&quot;, concat)
+
+# Reshape a 2x3 array into 3x2
+reshaped = np.array([[1, 2, 3], [4, 5, 6]]).reshape((3, 2))
+print(&quot;np.reshape →\n&quot;, reshaped)
+
+# Flatten the reshaped array into a 1D array
+flat = reshaped.flatten()
+print(&quot;np.flatten →&quot;, flat)
+
+# Add an extra dimension (row vector)
+exp_dim = np.expand_dims(np.array([1, 2]), axis=0)
+print(&quot;np.expand_dims →&quot;, exp_dim)
+
+# Check for NaN values
+print(&quot;np.isnan(arr) →&quot;, np.isnan(arr))
+
+# Check for infinite values
+print(&quot;np.isinf(arr) →&quot;, np.isinf(arr))
+
+# Find indices where value is 4
+print(&quot;np.where(arr == 4) →&quot;, np.where(arr == 4))
+</code></pre>
+<h2 id="pandas-python-data-analysis-library">Pandas (Python Data Analysis Library)</h2>
+<p>Pandas is the <strong>go‑to library</strong> for working with <strong>tabular data</strong> (rows &amp; columns). It builds on NumPy and adds labeled axes, powerful indexing, grouping, joining, time‑series tools, and I/O.</p>
+<h2 id="importing-pandas">Importing Pandas</h2>
+<pre><code class="language-python">import pandas as pd
+</code></pre>
+<hr />
+<h2 id="creating-data-structures">Creating Data Structures</h2>
+<h3 id="series-1d-labeled">Series (1D, labeled)</h3>
+<pre><code class="language-python">s = pd.Series([1, 2, 3], name=&quot;values&quot;)
+print(s)
+print(&quot;Index:&quot;, s.index)
+print(&quot;Values:&quot;, s.values)
+</code></pre>
+<h3 id="dataframe-2d-table">DataFrame (2D table)</h3>
+<pre><code class="language-python">df = pd.DataFrame({'a': [1, 2], 'b': [3, 4]})
+print(df)
+print(&quot;Columns:&quot;, df.columns)
+print(&quot;Shape:&quot;, df.shape)
+</code></pre>
+<hr />
+<h2 id="inputoutput">Input/Output</h2>
+<h3 id="read">Read</h3>
+<pre><code class="language-python">df = pd.read_csv('file.csv')
+df = pd.read_excel('file.xlsx')
+df = pd.read_json('file.json')
+</code></pre>
+<h3 id="write">Write</h3>
+<pre><code class="language-python">df.to_csv('out.csv', index=False)
+</code></pre>
+<hr />
+<h2 id="inspecting-data">Inspecting Data</h2>
+<pre><code class="language-python">df.head()
+df.tail()
+df.info()
+df.describe()
+df.shape
+df.columns
+df.dtypes
+</code></pre>
+<hr />
+<h2 id="selecting-data">Selecting Data</h2>
+<h3 id="column-selection">Column selection</h3>
+<pre><code class="language-python">df['col']
+df[['col1','col2']]
+</code></pre>
+<h3 id="row-selection">Row selection</h3>
+<pre><code class="language-python">df.loc[0]
+df.iloc[0]
+</code></pre>
+<h3 id="boolean-filtering">Boolean filtering</h3>
+<pre><code class="language-python">df[df['col'] &gt; 10]
+df.query(&quot;col &gt; 10&quot;)
+</code></pre>
+<hr />
+<h2 id="cleaning-data">Cleaning Data</h2>
+<pre><code class="language-python">df.dropna()
+df.fillna(0)
+df.replace('NA', pd.NA)
+df.drop(columns=['col1'])
+df.rename(columns={'a':'A'})
+df['col'] = df['col'].astype(int)
+df.duplicated()
+df.drop_duplicates()
+</code></pre>
+<hr />
+<h2 id="aggregation-grouping">Aggregation &amp; Grouping</h2>
+<pre><code class="language-python">df.groupby('group_col')['value'].mean()
+df.groupby('group_col').agg({'value':'mean', 'other':'sum'})
+pd.pivot_table(df, values='val', index='group', columns='type')
+</code></pre>
+<hr />
+<h2 id="merging-joining">Merging &amp; Joining</h2>
+<pre><code class="language-python">pd.concat([df1, df2])
+pd.merge(df1, df2, on='key')
+df1.join(df2.set_index('key'), on='key')
+</code></pre>
+<hr />
+<h2 id="sorting">Sorting</h2>
+<pre><code class="language-python">df.sort_values('col', ascending=False)
+df.sort_index()
+</code></pre>
+<hr />
+<h2 id="time-series">Time Series</h2>
+<pre><code class="language-python">df['date'] = pd.to_datetime(df['date'])
+df.set_index('date').resample('M').mean()
+</code></pre>
+<hr />
+<h2 id="math-stats">Math &amp; Stats</h2>
+<pre><code class="language-python">df['col'].mean()
+df['col'].std()
+df.corr()
+df['col'].cumsum()
+</code></pre>
+<hr />
+<h2 id="apply-map">Apply &amp; Map</h2>
+<pre><code class="language-python">df['col'].apply(lambda x: x * 2)
+df['label'].map({'A':1, 'B':2})
+df.applymap(lambda x: len(str(x)))
+</code></pre>
+<hr />
+<p>⬅️ <a href="../Lists_Dictionaries_Tuples/">Previous: Lists, Dictionaries, and Tuples</a> | <a href="../Loops_and_Conditionals/">Next: Loops and Conditionals ➡️</a></p>
 
 
 
