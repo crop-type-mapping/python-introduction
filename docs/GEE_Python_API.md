@@ -41,7 +41,7 @@ MAX_PIXELS   = 1e13
 # ee.Authenticate()  # run once interactively
 ee.Initialize(project=PROJECT_ID)
 
-# 1) Load AOI
+# Load AOI
 gdf = gpd.read_file(SHP_PATH)
 if gdf.crs is None or gdf.crs.to_epsg() != 4326:
     gdf = gdf.to_crs(4326)
@@ -50,7 +50,7 @@ aoi_geojson = json.loads(gdf.dissolve().to_json())
 aoi_fc = ee.FeatureCollection(aoi_geojson)
 aoi = aoi_fc.geometry()
 
-# 2) Build monthly composite
+# Build monthly composite
 start = ee.Date.fromYMD(YEAR, MONTH, 1)
 end   = start.advance(1, 'month')
 s2 = (ee.ImageCollection('COPERNICUS/S2_SR_HARMONIZED')
@@ -58,7 +58,9 @@ s2 = (ee.ImageCollection('COPERNICUS/S2_SR_HARMONIZED')
       .filterDate(start, end))
 comp = s2.median().clip(aoi)
 
-# 3) NDVI image
+print("Composite band names:", comp.bandNames().getInfo())
+
+# NDVI image
 ndvi = comp.normalizedDifference(['B8', 'B4']).rename('NDVI')
 
 # --- A) Display NDVI thumbnail ---
@@ -84,7 +86,7 @@ plt.imshow(img)
 plt.axis('off')
 plt.show()
 
-# --- B) Export the COMPOSITE (B2,B3,B4,B8,B11,B12) to Google Drive ---
+# --- Export the COMPOSITE (B2,B3,B4,B8,B11,B12) to Google Drive ---
 analysis_comp = comp.select(['B2','B3','B4','B8','B11','B12'])
 
 MONTH_TAG   = f"{YEAR}-{MONTH:02d}_{calendar.month_abbr[MONTH].lower()}"  # e.g., 2025-02_feb
